@@ -19,10 +19,11 @@ export const AppContext = (props) => {
   const [dataUseremployee, setDataUseremployee] = useState({});
 
   const [showModal, setShowModal] = useState(false);
+  const [token, setToken] = useState("");
 
 
   useEffect(() => {
-    getAllemployeeDataFunction(setDataAllemployee);
+    getAllemployeeDataFunction(setDataAllemployee, token);
 
   }, []);
 
@@ -68,7 +69,9 @@ export const AppContext = (props) => {
         createemployeeFunction,
         updateemployeeFunction,
         deleteemployeeFunction,
-        getAllemployeeDataFunction
+        getAllemployeeDataFunction,
+        token,
+        setToken
       }}
     >
       {props.children}

@@ -36,6 +36,7 @@ export function TablaGeneric({ title, data }) {
     setTextAlert,
     handleShowFloatAlter,
     dataUseremployee,
+    token
   } = useContext(GetTheAppContext);
 
   const displayedFields = [
@@ -59,6 +60,8 @@ export function TablaGeneric({ title, data }) {
       handleShowFloatAlter();
     }
   };
+
+  console.log(data);
 
   return (
     <div className="container mt-5">
